@@ -1,0 +1,23 @@
+<!-- miniprogram/pages/weather/weather.wxml -->
+<view class="weather">
+    <view class="weather_body">
+        <view class="area_info">当前所在地区: {{cityInfo}}</view>
+        <view class="city_name">{{weatherInfo.city}}</view>
+        <view class="city_tem">{{weatherInfo.realtime.temperature}}℃</view>
+        <view class="city_tem_area">{{weatherInfo.future[0].temperature}}</view>
+        <view class="city_detail_info">
+            <text>{{weatherInfo.realtime.info}}</text>
+            <text>{{weatherInfo.realtime.direct}}{{weatherInfo.realtime.power}}</text>
+        </view>
+    </view>
+    <view class="future_list">
+        <view class="future_title">
+            未来一周天气预览
+        </view>
+        <view class="future_item" wx:key="{{item.date}}" wx:for="{{weatherInfo.future}}" wx:for-item="item">
+            <text>{{item.date}}</text>
+            <text>{{item.weather}}</text>
+            <text>{{item.temperature}}</text>
+        </view>
+    </view>
+</view>

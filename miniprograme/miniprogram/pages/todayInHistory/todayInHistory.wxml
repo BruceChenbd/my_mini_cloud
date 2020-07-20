@@ -1,0 +1,11 @@
+<view class="today_in_history">
+   <view class="event_item" wx:for="{{historyData}}" wx:for-item="item" wx:key="{{item._id}}">
+       <view class="title">{{item.title}}</view>
+       <view class="date">
+          <text>{{item.year}}年{{item.month}}月{{item.day}}</text>
+          <text>{{item.lunar}}</text>
+       </view>
+       <view class="des">{{item.des}}</view>
+       <image class="img" src="" mode="aspectFill" src="{{item.pic}}" />
+   </view>
+</view>

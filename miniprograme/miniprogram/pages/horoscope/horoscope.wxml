@@ -1,0 +1,114 @@
+<view class="horoscope">
+    <view class="horoscope_input">
+        <input class="weui-input" auto-focus bindinput="changeInput" placeholder="输入您的星座,如:水瓶座"/>
+    </view>
+    <view class="horoscope_radio">
+     <radio-group bindchange="radioChange">
+       <label wx:for="{{radioArr}}" wx:for-item="item" wx:key="{{item.value}}" for="">
+          <radio class="" value="{{item.value}}" checked="{{item.value == 'today'? true: false}}" /> {{item.name}}
+       </label> 
+       <view bindtap="search" class="search">查询</view>
+     </radio-group>
+    </view>
+    <view class="today_data" wx:if="{{horoscopeData.name && checkBoxValue == 'today' || checkBoxValue == 'tomorrow'}}">
+        <view>
+          星座名称：{{horoscopeData.name}}
+        </view>
+        <view>
+          日期：{{horoscopeData.datetime}}
+        </view>
+        <view>
+            幸运色：{{horoscopeData.color}}
+        </view>
+        <view>
+            健康指数：{{horoscopeData.health}}
+        </view>
+        <view>
+            爱情指数：{{horoscopeData.love}}
+        </view>
+        <view>
+            财运指数：{{horoscopeData.money}}
+        </view>
+        <view>
+            幸运数字：{{horoscopeData.number}}
+        </view>
+        <view>
+            速配星座： {{horoscopeData.QFriend}}
+        </view>
+        <view>
+            工作指数： {{horoscopeData.work}}
+        </view>
+        <view>
+            综合指数： {{horoscopeData.all}}
+        </view>
+        <view>
+            今日概述： {{horoscopeData.summary}}
+        </view>
+    </view>
+    <view class="today_data" wx:elif="{{horoscopeData.name && checkBoxValue == 'week'}}">
+        <view>
+          星座名称：{{horoscopeData.name}}
+        </view>
+        <view>
+          日期：{{horoscopeData.date}}
+        </view>
+        <view>
+           {{horoscopeData.love}}
+        </view>
+        <view>
+           {{horoscopeData.money}}
+        </view>
+        <view>
+          {{horoscopeData.work}}
+        </view>
+        <view>
+          {{horoscopeData.job}}
+        </view>
+    </view>
+     <view class="today_data" wx:elif="{{horoscopeData.name && checkBoxValue == 'month'}}">
+        <view>
+          星座名称：{{horoscopeData.name}}
+        </view>
+        <view>
+          日期：{{horoscopeData.date}}
+        </view>
+        <view>
+            健康：{{horoscopeData.health}}
+        </view>
+        <view>
+            爱情：{{horoscopeData.love}}
+        </view>
+        <view>
+            财运：{{horoscopeData.money}}
+        </view>
+        <view>
+            工作： {{horoscopeData.work}}
+        </view>
+        <view>
+            综合： {{horoscopeData.all}}
+        </view>
+    </view>
+    <view class="today_data" wx:elif="{{horoscopeData.name && checkBoxValue == 'year'}}">
+        <view>
+          星座名称：{{horoscopeData.name}}
+        </view>
+        <view>
+          日期：{{horoscopeData.date}}
+        </view>
+        <view>
+          年度密码：{{horoscopeData.mima.text}}
+        </view>
+        <view>
+          事业运：{{horoscopeData.career[0]}}
+        </view>
+        <view>
+            感情运：{{horoscopeData.love[0]}}
+        </view>
+        <view>
+            财运： {{horoscopeData.finance[0]}}
+        </view>
+        <view>
+            概述： {{horoscopeData.mima.info}}
+        </view>
+    </view>
+</view>

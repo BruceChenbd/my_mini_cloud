@@ -1,0 +1,1 @@
+exports.baseUrl = 'http://web.juhe.cn:8080/constellation/getAll'

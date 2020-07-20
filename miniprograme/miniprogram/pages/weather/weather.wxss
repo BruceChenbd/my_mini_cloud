@@ -1,0 +1,67 @@
+/* miniprogram/pages/weather/weather.wxss */
+.weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    color: #fff;
+
+}
+.weather .weather_body {
+    background-image: linear-gradient(to bottom, #CCCCFF, #99CCFF);
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+}
+.weather .area_info {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.weather .weather_body .city_name{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.weather .weather_body .city_tem {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.weather .weather_body .city_tem_area {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.weather .weather_body .city_detail_info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 0 30px;
+}
+.weather .future_list {
+    background-image: linear-gradient(to right, #99CCFF, #6699CC);
+    margin-top: 10px;
+    width: 100%;
+    min-height: 260px;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weather .future_list .future_title {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.weather .future_list .future_item {
+    font-size: 14px;
+    padding: 8px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #CCFFFF;
+}

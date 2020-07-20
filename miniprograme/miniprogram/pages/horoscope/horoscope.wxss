@@ -1,0 +1,41 @@
+/* miniprogram/pages/horoscope/horoscope.wxss */
+.horoscope {
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #99CCFF, #333399);
+}
+.horoscope .weui-input {
+    border: 1px solid #336699;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    width: 90%;
+}
+.horoscope .horoscope_radio radio-group {
+    display: flex;
+    flex-direction: column;
+    max-height: 100px;
+    flex-wrap: wrap;
+    color: #fff;
+}
+.horoscope .horoscope_radio radio-group  label {
+    display: inline-block;
+    margin: 5px 0;
+}
+.search {
+    padding: 5px;
+    width: 56px;
+    background-image: linear-gradient(to right, #99CCFF, #333399);
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+.today_data {
+    width: 94%;
+}
+.today_data view {
+    margin: 5px 0;
+    color: #fff;
+    font-size: 14px;
+}
