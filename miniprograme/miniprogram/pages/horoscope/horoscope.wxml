@@ -1,6 +1,6 @@
 <view class="horoscope">
     <view class="horoscope_input">
-        <input class="weui-input" auto-focus bindinput="changeInput" placeholder="输入您的星座,如:水瓶座"/>
+        <input class="weui-input"  bindinput="changeInput" placeholder="输入您的星座,如:水瓶座"/>
     </view>
     <view class="horoscope_radio">
      <radio-group bindchange="radioChange">
@@ -10,7 +10,8 @@
        <view bindtap="search" class="search">查询</view>
      </radio-group>
     </view>
-    <view class="today_data" wx:if="{{horoscopeData.name && checkBoxValue == 'today' || checkBoxValue == 'tomorrow'}}">
+    <scroll-view scroll-y="true" style="height: 1000rpx">
+        <view class="today_data" wx:if="{{horoscopeData.name && checkBoxValue == 'today' || checkBoxValue == 'tomorrow'}}">
         <view>
           星座名称：{{horoscopeData.name}}
         </view>
@@ -111,4 +112,5 @@
             概述： {{horoscopeData.mima.info}}
         </view>
     </view>
+    </scroll-view>
 </view>

@@ -10,11 +10,12 @@ const db = cloud.database()
 exports.main = async (event, context) => {
   const {
     city,
-    key
+    key,
+    date
   } = event
 
   const ret = await db.collection('weather').where({
-    city: `${city}`
+    city: `${date}/${city}`
   }).get()
 
   if (ret.data.length > 0) {
@@ -36,7 +37,7 @@ exports.main = async (event, context) => {
   })
   await db.collection('weather').add({
     data: {
-      city: `${city}`,
+      city: `${date}/${city}`,
       result: resp.result
     }
   })
